@@ -1,17 +1,17 @@
 build : main.o GameState.o Map.o MapTile.o
-	g++ -o app.exe main.o GameState.o Map.o MapTile.o
+	g++ -o bin/app.exe main.o GameState.o Map.o MapTile.o
 
-main.o : main.cpp GameState.h
-	g++ -c main.cpp
+main.o : src/main.cpp src/GameState.h
+	g++ -c src/main.cpp
 
-GameState.o : GameState.cpp GameState.h
-	g++ -c GameState.cpp
+GameState.o : src/GameState.cpp src/GameState.h
+	g++ -c src/GameState.cpp
 
-Map.o : Map.cpp Map.h MapTile.h
-	g++ -c Map.cpp
+Map.o : src/Map.cpp src/Map.h src/MapTile.h
+	g++ -c src/Map.cpp
 
-MapTile.o : MapTile.cpp MapTile.h
-	g++ -c MapTile.cpp
+MapTile.o : src/MapTile.cpp src/MapTile.h
+	g++ -c src/MapTile.cpp
 
 clean : 
-	del app.exe main.o GameState.o Map.o MapTile.o
+	del bin\app.exe main.o GameState.o Map.o MapTile.o
