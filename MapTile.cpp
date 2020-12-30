@@ -1,0 +1,7 @@
+#include "MapTile.h"
+
+MapTile::MapTile(int x, int y)
+{
+    this->x = x;
+    this->y = y;
+}
